@@ -20,7 +20,7 @@
 			background-color: #aaa;
 			font-size: 12px;
 		}
-		div.hide{
+		div .hide{
 			display: none;
 		}
 	</style>
@@ -47,7 +47,7 @@
 		<div class="mini">class为mini</div>
 		<div class="mini" title="tesst">class为mini,title为tesst</div>
 	</div>
-	<div style="display:none" class="none">
+	<div style="display:none;" class="none">
 		style的display为none的div。
 	</div>
 	<div  class="hide">
@@ -65,7 +65,7 @@
 		// $("div").css("background","#bbffaa");
 		// $("*").css("background","#bbffaa");
 		// $("div .mini").css("background","#bbffaa");
-		$("#two~div").css("background","#bbffaa");
+		$("div.one :first-child").css("background","#bbffaa");
 	</script>
 </body>
 </html>
