@@ -3,3 +3,4 @@
 因为如果不加空格此时父元素就是div.one的父辈，但是加了空格后div.one为父元素。
 2.eq(index)只能匹配到一个元素，而：nth-child能匹配每一个符合条件的父元素的子元素。同时nth-child（index）是从1开始，而且eq（index）从0开始。first、first-child和last、last-child同理。
 3.$("div.showmore")中的div后加了空格，为搜索div下面的showmore类，不加空格为搜索既是div，类名又是showmore的一个元素，是交集选择。
+4.$(element).css("height");获取的高度为css设置的高度。$(element).height();获取的高度为该元素当前的实际高度。
