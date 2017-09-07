@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>网站超链接和图片提示效果</title>
+	<style type="text/css">
+		.tooltip img{
+			width: 100px;
+			
+		}
+		.tooltip{
+			border: 1px solid black;
+			padding: 5px;
+			height: 100px;
+			width: 100px;
+			margin: 15px;
+			display: inline-block;
+		}
+	</style>
+</head>
+<body>
+	<a href="1.jpg" title="撒哈拉" class="tooltip"><img src="1.jpg" ></a>
+	<a href="1.jpg" title="撒哈拉" class="tooltip"><img src="1.jpg"></a>
+	<a href="1.jpg" title="撒哈拉" class="tooltip"><img src="1.jpg"></a>
+	<a href="1.jpg" title="撒哈拉" class="tooltip"><img src="1.jpg"></a>
+	<script src="jquery-3.2.1.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	$(function(){
+		var x = -20;
+		var y = 50;
+		$("a.tooltip").mouseover(function(e){
+			this.myTitle = this.title;
+			this.title = "";
+			var imgTitle = this.myTitle?"</br>"+this.myTitle:"";
+			var tooltip = "<div id='tooltip'><img src='"+this.href+"'alt = '产品预览图' style='width: 200px;height: 200px;'/>"+imgTitle+"</div>";
+			$("body").append(tooltip);
+			$("#tooltip").css({
+				"top":(e.pageY+y)+"px",
+				"left":(e.pageX+x)+"px",
+				"position":"absolute"
+			}).show("fast");
+		}).mouseout(function(){
+			$("#tooltip").remove();
+			this.title = this.myTitle;
+		}).mousemove(function(e){
+			$("#tooltip").css({
+				"top":(e.pageY+y)+"px",
+				"left":(e.pageX+x)+"px",
+			});
+		});
+
+	})
+	</script>
+</body>
+</html>
