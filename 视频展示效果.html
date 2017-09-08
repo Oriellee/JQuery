@@ -48,19 +48,39 @@
 		}
 		.prev,.next{
 			display: inline-block;
-			width: 50px;
+			width: 38px;
 			height: 25px;
 			background-color: #fff;
 			margin: 0;
 			border: 0.5px solid grey;
-
+			outline: none;
 		}
-		.prev div{
-			width: 0px;
-		    height: 0px;
-		    border-width: 10px;
-		    border-style: solid;
-		    border-color: lightgreen pink yellow lightblue;
+		.v_caption a{
+			float: right;
+			margin-right: 20px;
+			text-decoration: none;
+		}
+		.v_content{
+			padding: 10px;
+			position: relative;
+			overflow: hidden;
+		}
+		.v_content_list{
+			padding: 0;
+			margin: 0;
+		}
+		.v_content_list ul{
+			list-style-type: none;;
+			padding: 0;
+			margin: 0;
+		}
+		.v_content_list ul li{
+			list-style-type: none;
+			display: inline-block;
+		}
+		.v_content_list img{
+			width: 50px ;
+			height: 50px;
 		}
 	</style>
 </head>
@@ -75,9 +95,9 @@
 				<span></span>
 			</div>
 			<div class="change_btn">
-				<button class="prev"><div></div></button><button class="next"><span></span></button>
+				<button class="prev"><</button><button class="next">></button>
 			</div>
-			<em><a href="#">更多>></a></em>
+			<a href="#">更多>></a>
 		</div>
 		<div class="v_content">
 			<div class="v_content_list">
