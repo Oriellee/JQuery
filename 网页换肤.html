@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<title>网页换肤</title>
+	<style type="text/css">
+		ul{
+			list-style-type: none;
+			padding: 0;
+			border: 1px solid grey;
+			width: 60%;
+			height: 20px;
+			margin: 30px auto;
+			padding: 5px 10px;
+		}
+		ul li{
+			list-style-type: none;
+			float: left;
+			border: 1px solid grey;
+			margin: 0px 5px;
+			width: 20px;
+			height: 20px;
+			text-align: center;
+			color: white;
+			font-size: 20px;
+			line-height: 20px;
+		}
+
+		#skin_0{
+			background-color: grey;
+		}
+		#skin_1{
+			background-color: #660099;
+		}
+		#skin_2{
+			background-color: red;
+		}
+		#skin_3{
+			background-color: blue;
+		}
+		#skin_4{
+			background-color: orange;
+		}
+		#skin_5{
+			background-color: #66FF66;
+		}
+		#skin_6{
+			background-color: #FFFF66;
+		}
+
+		#div_side_0,#div_side_1{
+			width: 60%;
+			height: 200px;
+			border: 1px solid grey;
+			margin: 10px auto;
+		}
+	</style>
+	<script src="jquery-3.2.1.js" type="text/javascript"></script>
+	<script type="text/javascript" src= "jquery.cookie.js"></script>
+</head>
+<body>
+	<ul id="skin">
+		<li id="skin_0" title="灰色" class="selected">△</li>
+		<li id="skin_1" title="紫色"></li>
+		<li id="skin_2" title="红色"></li>
+		<li id="skin_4" title="天蓝色"></li>
+		<li id="skin_5" title="橙色"></li>
+		<li id="skin_6" title="淡绿色"></li>
+	</ul>
+	<div id="div_side_0">
+		<div id="news">
+			<h1 class="title">新闻</h1>
+		</div>
+	</div>
+	<div id="div_side_1">
+		<div id="game">
+			<h1 class="title">娱乐</h1>
+		</div>
+	</div>
+
+	
+	<script type="text/javascript">
+		$(function(){
+			var $li = $("#skin li");
+			$li.click(function(){
+				switchSkin(this.id);
+			});
+			var cookie_skin = $.cookie("MyCssSkin");
+			if(cookie_skin){
+				switchSkin(cookie_skin);
+			}
+		})
+		function switchSkin(skinName){
+			$("#"+skinName).text("△").siblings().text("");
+				$("#div_side_0,#div_side_1").css('background-color',$("#"+skinName).css('background-color'));
+			$.cookie("MyCssSkin",skinName,{path:'/',expires:10});
+		}
+	</script>
+</body>
+</html>
