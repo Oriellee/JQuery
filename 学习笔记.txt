@@ -14,3 +14,5 @@
 			text-align: right;
 			border: 1px solid red;
 		}；
+		
+7.width: calc(100% - 250px); 使用calc时两个数字中间必须加空格才生效。

@@ -6,7 +6,6 @@
 	<title>调用ui插件</title>
 	<script src="jquery-3.2.1.js" type="text/javascript"></script>
 	<script type="text/javascript" src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>
-
 	<style type="text/css">
 		#myList{
 			width: 80px;
@@ -46,10 +45,28 @@
 		<li><a href="#">分享</a></li>
 		<li><a href="#">群组</a></li>
 	</ul>
+	<div class="a">red</div>
+	<div style="color: blue">blue</div>
+	<div style="color: green">green</div>
+	<div style="color: yellow">yellow</div>
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$("#myList").sortable({delay:1});
+			alert($("div").color()+"\n返回字符串颜色");
+			alert($("div").color("red")+"\n改为颜色");
+			$("div").border("1px solid black");
 		});
+		;(function($){
+			jQuery.fn.extend({
+				"color":function(value){
+					return this.css("color",value);
+				},
+				"border":function(value){
+					return this.css("border",value);
+				}
+			});
+			
+		})(jQuery);
 	</script>
 </body>
 </html>
