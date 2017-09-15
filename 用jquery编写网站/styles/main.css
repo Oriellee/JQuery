@@ -1,10 +1,10 @@
 *{
-	border: 1px solid red;
+	/*border: 1px solid black;*/
 }
 body{
 	padding: 0;
 	margin: 0;
-	min-width: 700px;
+	min-width: 950px;
 }
 #header{
 	height: 110px;
@@ -128,12 +128,14 @@ body{
 }
 #content{
 	margin: 10px auto;
-	width: 100%;
-	padding: 0;
+	width: 85%;
+	min-width: 950px;
+	padding: 5px 10px;
 }
 #commodity{
 	padding: 0;
-	max-width: 250px;
+	max-width:250px;
+	border: 1px solid grey;
 }
 #commodity h4{
 	margin: 0;
@@ -158,14 +160,14 @@ body{
 }
 #commodity #list_1 ul{
 	padding: 0px;
-	width: 180px;
+	width: 95%;
 	margin: 0 auto;
 	list-style-type: none;
 	overflow: hidden;
 }
 #commodity #list_1 ul li{
-	width: 80px;
-	margin: 4px;
+	width: 45%;
+	margin: 2px 2%;
 	text-align: center;
 	display: inline-block;
 	font-size: 13px;
@@ -173,26 +175,39 @@ body{
 	cursor: pointer;
 }
 #show{
-	width: calc(100% - 250px);
-	min-width: 400px;
+	width: calc(100% - 270px);
 	padding: 0;
-	margin-right: 0;
+	margin-left: 10px;
+
 }
 #showUp{
 	margin: 0;
+	padding: 0;
+	height: 353px;
+}
+#showUp #upOll{
+	width: calc(100% - 250px);
+	min-width: 400px;
 	padding: 0;
 }
 #showUp #upOll>div{
 	width: 100%;
 	height: 80%;
 	overflow: hidden;
+
 }
 #showUp #upOll img{
 	width: 100%;
+	height: 350px;
+	position: absolute;
+	cursor: pointer;
 }
 #showUp #upOll ul{
 	list-style-type: none;
 	padding: 0;
+	position: absolute;
+	top: 315px;
+	width: 100%
 }
 #showUp #upOll ul li{
 	list-style-type: none;
@@ -201,11 +216,131 @@ body{
 	height: 35px;
 	line-height: 35px;
 	text-align: center;
-	background-color: rgba(0,0,0,0.7);
 	color: #fff;
+	background-color: black;
 	font-size: 15px;
 	font-weight: bold;
+	opacity: 0.5;
+	border: 1px solid #fff;
+	cursor: pointer;
 }
-
-
-
+#showUp #upOll .light{
+	opacity: 0.6;
+	background-color: #fff;
+	color: black;
+}
+#bg-2,#bg-3,#bg-4{
+	display: none;
+}
+#showUp #upNews{
+	width: 250px;
+	padding: 0 0 0 10px;
+}
+#showUp #upNews img{
+	width: 100%;
+	height: 150px;
+}
+#upNews #news{
+	width: 100%;
+	border: 1px solid grey;
+	margin-top: 8px;
+	height: 190px;
+}
+#upNews #news h5{
+	height: 25px;
+	font-size: 15px;
+	font-weight: bolder;
+	border-bottom: 1px solid grey;
+	padding-left: 10px;
+} 
+#news ul{
+	list-style-type: none;
+	padding: 5px;
+}
+#news ul li{
+	font-size: 13px;
+	color: grey;
+	margin:4px 0;
+	cursor: pointer;
+}
+#tooltip{
+	position: absolute;
+	border: 1px solid #333;
+	background-color: grey;
+	padding: 1px;
+	color: #fff;
+	display: none;
+	opacity: 0.7;
+}
+#showDown{
+	width: 100%;
+	padding: 0;
+	margin-top: 5px;
+	/*height: 203px;*/
+}
+#showDown #downText{
+	height: 25px;
+	border-bottom: 1px solid grey;
+}
+#showDown #downText h5{
+	margin: 0;
+	display: inline-block;
+	width: 80px;
+	font-size: 15px;
+	font-weight: bolder;
+}
+#showDown #downText ul{
+	list-style-type: none;
+	padding: 0;
+	float: right;
+}
+#showDown #downText ul li{
+	list-style-type: none;
+	float: left;
+	margin: 0 7px;
+	width: 50px;
+	height: 20px;
+	line-height: 20px;
+	background-color: #c1b497;
+	color: #fff;
+	text-align: center;
+	font-size: 12px;
+	font-weight: bolder;
+}
+#showDown #downList{
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	overflow: hidden;
+}
+#downList ul{
+	width: 100%;
+	list-style-type: none;
+	padding:1% 0 0 0 ;
+	overflow: hidden;
+}
+#downList ul li{
+	list-style-type: none;
+	float: left;
+	width: 23%;
+	margin: 0 1%;
+}
+#downList ul li img{
+	width: 100%;
+	max-height: 120px;
+}
+#footer{
+	width: 100%;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	background-color: black;
+}
+#footer a{
+	color:#fff;
+	text-decoration: none;
+}
+#footer a:hover{
+	color: #c1b497;
+	text-decoration: underline;
+}
