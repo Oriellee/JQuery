@@ -1,3 +1,6 @@
+html,body{
+	height: 100%;
+}
 *{
 	/*border: 1px solid black;*/
 }
@@ -68,6 +71,7 @@ body{
 	width: 70%;
 	margin: 0 auto; 
 	min-width: 610px;
+
 }
 #menu li{
 	width: 18%;
@@ -97,8 +101,9 @@ body{
 	top: 110px;
 	left: 5%;
 	padding: 1%;
-	background-color: rgba(0,0,0,0.03);
+	background-color: rgba(0,0,0,0.7);
 	display: none;
+	z-index: 999;
 }
 #menu .nav .list{
 	display: inline-block;
@@ -119,7 +124,7 @@ body{
 	font-size: 10px;
 	text-align: left;
 	padding-left: 10px;
-	color: 	#5B5B5B;
+	color: 	#fff;
 	cursor: pointer;
 }
 #menu .nav .list li:hover,#commodity #list_1 ul li:hover{
@@ -131,6 +136,7 @@ body{
 	width: 85%;
 	min-width: 950px;
 	padding: 5px 10px;
+	min-height: calc(100% - 170px);
 }
 #commodity{
 	padding: 0;

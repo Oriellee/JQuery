@@ -17,8 +17,16 @@
 	<script type="text/javascript" src="scripts/tooltip.js"></script>
 	<script type="text/javascript" src="scripts/imageHover.js"></script>
 	<script type="text/javascript" src="scripts/switchimg.js"></script>
+	<script type="text/javascript" src="scripts/tab.js"></script>
+	<script type="text/javascript" src="scripts/jquery.zoom.js"></script>
+	<script type="text/javascript" src="scripts/use_jqzoom.js"></script>
+	<script type="text/javascript" src="scripts/look.js"></script>
+	<script type="text/javascript" src="scripts/right.js"></script>
 </head>
 <body>
+	<div id="before">
+		<img src="images/1.jpg">
+	</div>
 	<div id="header">
 		<div id="title">
 			<img src="images/logo.png" id="titleImg">
@@ -213,8 +221,12 @@
 		<div id="show" class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
 			<div id="left" class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
 				<div id="leftImg">
-					<img src="images/1.jpg">
-					<button>观看清晰图片</button>
+					<span class="jqzoom" id="ex1">
+						<img src="images/1.jpg" alt="预览大图" >
+						<img src="images/2.jpg" alt="预览大图" >
+						<img src="images/3.jpg" alt="预览大图" >
+					</span>
+					<button id="look1">查看高清大图</button>
 					<ul>
 						<li><img src="images/1.jpg"></li>
 						<li><img src="images/2.jpg"></li>
@@ -227,10 +239,51 @@
 						<li>产品尺码表</li>
 						<li>产品介绍</li>
 					</ul>
-					<textarea></textarea>
+					<div>
+						<textarea>aaaa</textarea>
+						<textarea>bbb</textarea>
+						<textarea>ccc</textarea>
+					</div>
 				</div>
 			</div>
-			<div id="right" class="col-xs-7 col-sm-7 col-md-7 col-lg-7"></div>
+			<div id="right" class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+				<h5>2017秋冬新品上市</h5>
+				<p>全新棉品双层针织，精选100%长绒棉制造而成。平整度好，短绒少。面料不反光，具有优秀的光泽度。</p>
+				<p id="price">价格:370</p>
+				<p id="less">促销:200</p>
+				<p id="color">颜色:</p>
+				<ul id="colorChange">
+					<li style="background-color:black" title="黑"></li>
+					<li style="background-color:blue" title="蓝"></li>
+					<li style="background-color:#fff" title="白"></li>
+				</ul>
+				<p id="size">尺寸:</p>
+				<ul id="sizeChange"> 
+					<li>S</li>
+					<li>L</li>
+					<li>SL</li>
+					<li>LL</li>
+				</ul>
+				<label>
+					<p>数量：</p>
+					<select>
+						<option>1</option>
+						<option>2</option>
+					</select>
+				</label>
+				<p id="sum">总价:200</p>
+				<label>
+					<p>给商品评分</p>
+					<select>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+					</select>
+				</label>
+				<button id="up">放入购物车</button>
+			</div>
 		</div>
 	</div>
 	<div id="footer">
