@@ -38,3 +38,6 @@ end	紧接着要抽取的片段的结尾的下标。若未指定此参数，则�
 	方法2：br元素+clear
 	在浮动元素中添加一个空的子元素，如<br style="clear: both;" />。
 	方法3：:after+clear+zoom:1
+	
+12.“display:block-inline形式的Span或Div中添加文字后，导致Span或Div排版掉落、错位”的原因及解决方法
+解决方法：vertical-align:top；
