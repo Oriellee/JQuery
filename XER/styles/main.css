@@ -1,310 +1,517 @@
-*{
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    outline: none;
 }
-#header{
-	height: 9rem;
-	background-color: black;
-}
-#title{
-	overflow: hidden;
-	padding: 0.5rem 0.8rem;
-}
-#titleImg{
-	width: 9rem;
-	float: left;
-	margin-left: 0.8rem;
-	display: inline;
-}
-#search{
-	height: 2.8rem;
-	vertical-align: top;
-	display: inline-block;
-	margin:0.8rem 0 0 2.5rem;
-	background-color: black;
-}
-#search input{
-	width: 13rem;
-	height: 2.6rem;
-	background-color: black;
-	outline: none;
-	border: none;
-	text-align: center;
-	color: #c1b497;
-}
-#search input:hover{
-	background-color:#fff;
-	color: #c1b497;
-}
-#search img{
-	width: 1.3rem;
-	margin: -0.2rem 0.7rem 0.5rem 0.7rem;
-	cursor: pointer;
-}
-#changeColor{
-	overflow: hidden;
-	float: right;
-	margin: 1rem 2.5rem 0 0 ;
-}
-#changeColor li{
-	width: 1.2rem;
-	height: 1.2rem;
-	float: left;
-	margin: 0.3rem;
-	border: 1px solid grey;
-	cursor: pointer;
-}
-#menu{
-	overflow: hidden;
-	width: 64rem;
-	margin: 0 auto; 
 
+#header {
+    height: 9rem;
+    background-color: black;
 }
-#menu li{
-	width: 18%;
-	height: 2.8rem;
-	float: left;
-	text-align: center;
-	line-height: 2.8rem;
-	margin: 0 1%;
+
+#title {
+    overflow: hidden;
+    padding: 0.5rem 0.8rem;
 }
-#menu li a{
-	font-size: 0.5rem;
-	font-weight: bold;
-	color: #fff;
-	
-	cursor: pointer;
-	text-decoration: none;
+
+#titleImg {
+    width: 9rem;
+    float: left;
+    margin-left: 0.8rem;
+    display: inline;
 }
-#menu li a:hover{
-	color: #c1b497;
+
+#search {
+    height: 2.8rem;
+    vertical-align: top;
+    display: inline-block;
+    margin: 0.8rem 0 0 2.5rem;
+    background-color: black;
 }
-#menu .nav{
-	position: absolute;
-	overflow: hidden;
-	width: 96%;
-	left: 2%;
-	top: 9.1rem;
-	padding: 1%;
-	background-color: rgba(0,0,0,0.7);
-	display: none;
-	z-index: 999;
+
+#search input,
+#secondInput input {
+    width: 13rem;
+    height: 2.6rem;
+    background-color: black;
+    outline: none;
+    border: none;
+    text-align: center;
+    color: #c1b497;
 }
-#menu .nav .list{
-	display: inline-block;
-	overflow: hidden;
-	text-align: center;
-	vertical-align: top;
+
+#search input:hover {
+    background-color: #fff;
+    color: #c1b497;
 }
-#menu .nav .list li:first-child{
-	margin: 0.5rem 0;
-	font-size: 1.2rem;
-	font-weight: bolder;
+
+#search img {
+    width: 1.3rem;
+    margin: -0.2rem 0.7rem 0.5rem 0.7rem;
+    cursor: pointer;
 }
-#menu .nav .list li{
-	float: none;
-	width: 13rem;
-	height: 2.5rem;
-	font-size: 1.2rem;
-	text-align: left;
-	padding-left: 1rem;
-	color: 	#fff;
-	cursor: pointer;
+
+#secondInput {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    width: 98%;
+    margin: 0 1%;
+    padding: 0;
+    height: 5rem;
+    top: 9rem;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #c1b497;
 }
-#menu .nav .list li:hover,#list_1 ul li:hover{
-	text-decoration: underline;
-	color: #c1b497;
+
+#secondInput input {
+    width: 89%;
+    height: 4.7rem;
+    background-color: #fff;
+    text-align: left;
+    padding-left: 3%;
 }
-#content{
-	margin: 1rem auto;
-	width: 95rem;
-	padding: 0;
+
+#secondInput button {
+    width: 10%;
+    height: 3.5rem;
+    background-color: #fff;
+    border: 1px solid black;
+    font-size: 1rem;
+    border-radius: 5px;
 }
-#commodity{
-	border: 1px solid grey;
+
+#changeColor {
+    overflow: hidden;
+    float: right;
+    margin: 1rem 2.5rem 0 0;
 }
-#commodity h4{
-	height: 2.8rem;
-	background-color: black;
-	color: #fff;
-	padding: 0.7rem;
-	font-size: 1.5rem;
+
+#changeColor li {
+    width: 1.2rem;
+    height: 1.2rem;
+    float: left;
+    margin: 0.3rem;
+    border: 1px solid grey;
+    cursor: pointer;
 }
-#list_1{
-	background-color: #fff;
-	padding: 0 0.5rem;
+
+#smallMenu {
+    display: none;
+    width: 3rem;
+    height: 3rem;
+    background-color: black;
+    color: #c1b497;
+    float: right;
+    margin: 1.2rem 1.5rem 0 0;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 3rem;
+    font-size: 2rem;
+    font-weight: bolder;
+    border: 1px solid #c1b497;
+    cursor: pointer;
 }
-#list_1 h5{
-	font-weight: bold;
-	height: 2.8rem;
-	padding-left: 0.8rem;
-	line-height: 2.8rem;
-	border-bottom: 1px solid grey;
+
+#newMenu {
+    display: none;
+    position: absolute;
+    width:50%;
+    min-height: 10rem;
+    left: 50%;
+    top: 6rem;
+    padding: 1%;
+    background-color: #FAFAFA;
+    opacity: 0.9;
+    display: none;
+    z-index: 50;
+    text-align: left;
 }
-#list_1 ul{
-	width: 95%;
-	margin: 0 auto;
-	overflow: hidden;
+
+#newMenu #menu {
+    width: 100%;
 }
-#list_1 ul li{
-	width: 45%;
-	margin: 0.2rem 2%;
-	text-align: center;
-	display: inline-block;
-	font-size: 1.1rem;
-	float: left;
-	cursor: pointer;
+
+#newMenu #menu li {
+    width: 100%;
+    float: none;
+    line-height: 3rem;
+    margin: 0 auto;
+    margin: 1rem 0;
 }
-#show{
-	padding: 0 0 0 1.5%;
+
+#newMenu #menu li a {
+    color: black;
+    font-size: 2rem;
+    font-weight: normal;
 }
-#showUp{
-	height: 28rem;
-	padding: 0;
+#newMenu #menu .nav {
+    position: absolute;
+    overflow: auto;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    padding: 1%;
+    background-color: #FAFAFA;
+    display: none;
+    z-index: 60;
 }
-#upOll{
-	height: 28rem;
-	padding:0;
+
+#newMenu #menu .nav .list {
+    display: inline-block;
+    overflow: auto;
+    text-align: center;
+    vertical-align: top;
 }
-#upOll>div{
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
+
+#newMenu #menu .nav .list li:first-child {
+    margin: 0.5rem 0;
+    font-size: 0.5rem;
+    font-weight: bolder;
 }
-#upOll img{
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	cursor: pointer;
+
+#newMenu #menu .nav .list li {
+    float: none;
+    width: 50%;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 0.5rem;
+    text-align: left;
+    padding-left: 1rem;
+    color: black;
+    cursor: pointer;
 }
-#upOll ul{
-	position: absolute;
-	top: 25.2rem;
-	width: 100%
+
+#newMenu #menu .nav .list li:hover,
+#list_1 ul li:hover {
+    text-decoration: underline;
+    color: #c1b497;
 }
-#upOll ul li{
-	float: left;
-	width: 25%;
-	height: 2.9rem;
-	line-height: 2.9rem;
-	text-align: center;
-	color: #fff;
-	background-color: black;
-	font-size: 1.3rem;
-	font-weight: bold;
-	opacity: 0.5;
-	border: 1px solid #fff;
-	cursor: pointer;
+#menu {
+    overflow: hidden;
+    width: 64rem;
+    margin: 0 auto;
 }
-.light{
-	opacity: 0.6;
-	background-color: #fff;
-	color: black;
+
+#menu li {
+    width: 18%;
+    height: 2.8rem;
+    float: left;
+    text-align: center;
+    line-height: 2.8rem;
+    margin: 0 1%;
 }
-#bg-2,#bg-3,#bg-4{
-	display: none;
+
+#menu li a {
+    font-size: 0.5rem;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
 }
-#upNews{
-	padding: 0  0 0 0.5%;
+
+#menu li a:hover,#newMenu #menu li a:hover{
+    color: #c1b497;
 }
-#upNews img{
-	width: 100%;
-	height: 11rem;
+
+#menu .nav {
+    position: absolute;
+    overflow: hidden;
+    width: 96%;
+    left: 2%;
+    top: 9.1rem;
+    padding: 1%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    z-index: 50;
 }
-#news{
-	width: 100%;
-	border: 1px solid grey;
-	margin-top: 0.5rem;
-	height: 16.5rem;
+
+#menu .nav .list {
+    display: inline-block;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: top;
 }
-#news h5{
-	height: 2.2rem;
-	font-size: 1.5rem;
-	font-weight: bolder;
-	border-bottom: 1px solid grey;
-	padding-left: 0.8rem;
-	margin: 0.3rem;
-	line-height: 2.2rem;
-} 
-#news ul{
-	padding: 0.2rem;
+
+#menu .nav .list li:first-child {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    font-weight: bolder;
 }
-#news ul li{
-	font-size: 1rem;
-	color: grey;
-	margin:0.4rem 0;
-	cursor: pointer;
+
+#menu .nav .list li {
+    float: none;
+    width: 13rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    text-align: left;
+    padding-left: 1rem;
+    color: #fff;
+    cursor: pointer;
 }
-#tooltip{
-	position: absolute;
-	border: 1px solid #333;
-	background-color: grey;
-	padding: 0.1rem;
-	color: #fff;
-	display: none;
-	opacity: 0.7;
+
+#menu .nav .list li:hover,
+#list_1 ul li:hover {
+    text-decoration: underline;
+    color: #c1b497;
 }
-#showDown{
-	width: 100%;
-	margin-top: 0.5rem;
-	/*height: 203px;*/
+
+#content {
+    margin: 1rem auto;
+    width: 95rem;
+    padding: 0;
 }
-#downText{
-	height: 2.2rem;
-	border-bottom: 1px solid grey;
+
+#commodity {
+    border: 1px solid grey;
 }
-#downText h5{
-	display: inline-block;
-	width: 7rem;
-	font-size: 1.5rem;
-	font-weight: bolder;
-	margin: 0.3rem;
+
+#commodity h4 {
+    height: 2.8rem;
+    background-color: black;
+    color: #fff;
+    padding: 0.7rem;
+    font-size: 1.5rem;
 }
-#downText ul{
-	float: right;
+
+#list_1 {
+    background-color: #fff;
+    padding: 0 0.5rem;
 }
-#downText ul li{
-	float: left;
-	margin: 0 0.7rem;
-	width: 4.2rem;
-	height: 1.6rem;
-	line-height: 1.6rem;
-	background-color: #c1b497;
-	color: #fff;
-	text-align: center;
-	font-size: 1rem;
-	font-weight: bolder;
+
+#list_1 h5 {
+    font-weight: bold;
+    height: 2.8rem;
+    padding-left: 0.8rem;
+    line-height: 2.8rem;
+    border-bottom: 1px solid grey;
 }
-#downList{
-	width: 100%;
-	overflow: hidden;
+
+#list_1 ul {
+    width: 95%;
+    margin: 0 auto;
+    overflow: hidden;
 }
-#downList ul{
-	width: 100%;
-	padding:1% 0 0 0 ;
-	overflow: hidden;
+
+#list_1 ul li {
+    width: 45%;
+    margin: 0.2rem 2%;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.1rem;
+    float: left;
+    cursor: pointer;
 }
-#downList ul li{
-	float: left;
-	width: 23%;
-	margin: 0 1%;
+
+#show {
+    padding: 0 0 0 1.5%;
 }
-#downList ul li img{
-	width: 100%;
+
+#showUp {
+    height: 28rem;
+    padding: 0;
 }
-#footer{
-	width: 100%;
-	height: 3.5rem;
-	text-align: center;
-	line-height: 3.5rem;
-	background-color: black;
+
+#upOll {
+    height: 28rem;
+    padding: 0;
 }
-#footer a{
-	color:#fff;
-	text-decoration: none;
+
+#upOll>div {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
-#footer a:hover{
-	color: #c1b497;
-	text-decoration: underline;
+
+#upOll img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    cursor: pointer;
+}
+
+#upOll ul {
+    position: absolute;
+    top: 25.2rem;
+    width: 100%
+}
+
+#upOll ul li {
+    float: left;
+    width: 25%;
+    height: 2.9rem;
+    line-height: 2.9rem;
+    text-align: center;
+    color: #fff;
+    background-color: black;
+    font-size: 1.3rem;
+    font-weight: bold;
+    opacity: 0.5;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+.light {
+    opacity: 0.6;
+    background-color: #fff;
+    color: black;
+}
+
+#bg-2,
+#bg-3,
+#bg-4 {
+    display: none;
+}
+
+#upNews {
+    padding: 0 0 0 0.5%;
+}
+
+#upNews img {
+    width: 100%;
+    height: 11rem;
+}
+
+#news {
+    width: 100%;
+    border: 1px solid grey;
+    margin-top: 0.5rem;
+    height: 16.5rem;
+}
+
+#news h5 {
+    height: 2.2rem;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    border-bottom: 1px solid grey;
+    padding-left: 0.8rem;
+    margin: 0.3rem;
+    line-height: 2.2rem;
+}
+
+#news ul {
+    padding: 0.2rem;
+}
+
+#news ul li {
+    font-size: 1rem;
+    color: grey;
+    margin: 0.4rem 0;
+    cursor: pointer;
+}
+
+#tooltip {
+    position: absolute;
+    border: 1px solid #333;
+    background-color: grey;
+    padding: 0.1rem;
+    color: #fff;
+    display: none;
+    opacity: 0.7;
+}
+
+#showDown {
+    width: 100%;
+    margin-top: 0.5rem;
+    /*height: 203px;*/
+}
+
+#downText {
+    height: 2.2rem;
+    border-bottom: 1px solid grey;
+}
+
+#downText h5 {
+    display: inline-block;
+    width: 7rem;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    margin: 0.3rem;
+}
+
+#downText ul {
+    float: right;
+}
+
+#downText ul li {
+    float: left;
+    margin: 0 0.7rem;
+    width: 4.2rem;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    background-color: #c1b497;
+    color: #fff;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+#downList {
+    width: 100%;
+    overflow: hidden;
+}
+
+#downList ul {
+    width: 100%;
+    padding: 1% 0 0 0;
+    overflow: hidden;
+}
+
+#downList ul li {
+    float: left;
+    width: 23%;
+    margin: 0 1%;
+}
+
+#downList ul li img {
+    width: 100%;
+    height: 10rem;
+}
+
+#footer {
+    width: 100%;
+    height: 3.5rem;
+    text-align: center;
+    line-height: 3.5rem;
+    background-color: black;
+}
+
+#footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#footer a:hover {
+    color: #c1b497;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1160px) {
+    #changeColor {
+        margin: 1rem 0.5rem 0 0;
+    }
+    #changeColor li {
+        float: none;
+    }
+    #search input {
+        display: none;
+    }
+    #search img {
+        margin: 0.5rem;
+    }
+    #content {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+	#count{
+	display: flex;
+	flex-flow:column
+	}
+	#show,#upNews,#showDown,#downList,#downText{
+		margin-top: 1rem;
+	}
 }
