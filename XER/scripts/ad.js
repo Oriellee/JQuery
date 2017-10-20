@@ -1,6 +1,6 @@
 $(function(){
 	imgMove();
-	$("#showUp #upOll ul li").mouseout(function(event) {
+	$("#upOll ul li").mouseout(function(event) {
 		imgMove($(this).index()+1);
 	});
 })
@@ -19,24 +19,24 @@ function imgMove(value){
 		else{
 			indexNum=1;
 		}
-		$("#showUp #upOll>div #bg-"+indexNum)
+		$("#upOll>div #bg-"+indexNum)
 			.stop(true,true)
 			.fadeIn(400)
 			.siblings()
 			.fadeOut(400);
-		$("#showUp #upOll ul li")
+		$("#upOll ul li")
 		.eq(indexNum-1)
 		.addClass('light')
 		.siblings()
 		.removeClass('light');
 	},3000);
-	$("#showUp #upOll ul li").mouseover(function(event) {
+	$("#upOll ul li").mouseover(function(event) {
 		clearInterval(timer);
 		$(this)
 		.addClass('light')
 		.siblings()
 		.removeClass('light');
-		$("#showUp #upOll>div #bg-"+($(this)
+		$("#upOll>div #bg-"+($(this)
 			.index()+1))
 			.stop(true,true)
 			.fadeIn(400)

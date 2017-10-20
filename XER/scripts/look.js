@@ -1,5 +1,5 @@
 $(function(){
-	$("#leftImg #look1").click(function(event) {
+	$("#look1").click(function(event) {
 	$("#before").css('display', 'inline-block');
 	});
 	$("#before").click(function(event) {

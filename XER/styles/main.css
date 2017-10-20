@@ -94,7 +94,7 @@ body{
 #menu li a:hover{
 	color: #c1b497;
 }
-#menu .nav{
+.nav{
 	position: absolute;
 	overflow: hidden;
 	width: 90%;
@@ -105,19 +105,19 @@ body{
 	display: none;
 	z-index: 999;
 }
-#menu .nav .list{
+.nav .list{
 	display: inline-block;
 	overflow: hidden;
 	text-align: center;
 	padding: 0;
 	vertical-align: top;
 }
-#menu .nav .list li:first-child{
+.nav .list li:first-child{
 	margin: 5px 0;
 	font-size: 14px;
 	font-weight: bolder;
 }
-#menu .nav .list li{
+.nav .list li{
 	float: none;
 	width: 150px;
 	height: 28px;
@@ -127,7 +127,7 @@ body{
 	color: 	#fff;
 	cursor: pointer;
 }
-#menu .nav .list li:hover,#commodity #list_1 ul li:hover{
+.nav .list li:hover,#list_1 ul li:hover{
 	text-decoration: underline;
 	color: #c1b497;
 }
@@ -151,12 +151,12 @@ body{
 	padding: 7px;
 	font-size: 18px;
 }
-#commodity #list_1{
+#list_1{
 	background-color: #fff;
 	margin: 0;
 	padding: 0 5px;
 }
-#commodity #list_1 h5{
+#list_1 h5{
 	font-weight: bold;
 	height: 33px;
 	margin: 0;
@@ -164,14 +164,14 @@ body{
 	line-height: 33px;
 	border-bottom: 1px solid grey;
 }
-#commodity #list_1 ul{
+#list_1 ul{
 	padding: 0px;
 	width: 95%;
 	margin: 0 auto;
 	list-style-type: none;
 	overflow: hidden;
 }
-#commodity #list_1 ul li{
+#list_1 ul li{
 	width: 45%;
 	margin: 2px 2%;
 	text-align: center;
@@ -191,31 +191,31 @@ body{
 	padding: 0;
 	height: 353px;
 }
-#showUp #upOll{
+#upOll{
 	width: calc(100% - 250px);
 	min-width: 400px;
 	padding: 0;
 }
-#showUp #upOll>div{
+#upOll>div{
 	width: 100%;
 	height: 80%;
 	overflow: hidden;
 
 }
-#showUp #upOll img{
+#upOll img{
 	width: 100%;
 	height: 350px;
 	position: absolute;
 	cursor: pointer;
 }
-#showUp #upOll ul{
+#upOll ul{
 	list-style-type: none;
 	padding: 0;
 	position: absolute;
 	top: 315px;
 	width: 100%
 }
-#showUp #upOll ul li{
+#upOll ul li{
 	list-style-type: none;
 	float: left;
 	width: 25%;
@@ -230,7 +230,7 @@ body{
 	border: 1px solid #fff;
 	cursor: pointer;
 }
-#showUp #upOll .light{
+.light{
 	opacity: 0.6;
 	background-color: #fff;
 	color: black;
@@ -238,21 +238,21 @@ body{
 #bg-2,#bg-3,#bg-4{
 	display: none;
 }
-#showUp #upNews{
+#upNews{
 	width: 250px;
 	padding: 0 0 0 10px;
 }
-#showUp #upNews img{
+#upNews img{
 	width: 100%;
 	height: 150px;
 }
-#upNews #news{
+#news{
 	width: 100%;
 	border: 1px solid grey;
 	margin-top: 8px;
 	height: 190px;
 }
-#upNews #news h5{
+#news h5{
 	height: 25px;
 	font-size: 15px;
 	font-weight: bolder;
@@ -284,23 +284,23 @@ body{
 	margin-top: 5px;
 	/*height: 203px;*/
 }
-#showDown #downText{
+#downText{
 	height: 25px;
 	border-bottom: 1px solid grey;
 }
-#showDown #downText h5{
+#downText h5{
 	margin: 0;
 	display: inline-block;
 	width: 80px;
 	font-size: 15px;
 	font-weight: bolder;
 }
-#showDown #downText ul{
+#downText ul{
 	list-style-type: none;
 	padding: 0;
 	float: right;
 }
-#showDown #downText ul li{
+#downText ul li{
 	list-style-type: none;
 	float: left;
 	margin: 0 7px;
@@ -313,7 +313,7 @@ body{
 	font-size: 12px;
 	font-weight: bolder;
 }
-#showDown #downList{
+#downList{
 	padding: 0;
 	margin: 0;
 	width: 100%;

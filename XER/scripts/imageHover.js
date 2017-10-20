@@ -1,5 +1,5 @@
 $(function(){
-	$("#showDown #downText ul li").mouseover(function(event) {
+	$("#downText ul li").mouseover(function(event) {
 		$(this).css({
 			"background-color":"black"
 		});
