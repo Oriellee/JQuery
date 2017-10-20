@@ -224,6 +224,8 @@
 	font-weight: bolder;
 	border-bottom: 1px solid grey;
 	padding-left: 0.8rem;
+	margin: 0.3rem;
+	line-height: 2.2rem;
 } 
 #news ul{
 	padding: 0.2rem;
